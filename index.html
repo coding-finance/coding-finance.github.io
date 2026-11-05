@@ -48,7 +48,7 @@
     .btn:hover { background: var(--black); color: var(--white); border-color: var(--black); }
 
     /* Three-column board */
-    .board { display: grid; grid-template-columns: 1fr 2fr; gap: 16px; padding: 16px 0; align-items: stretch; }
+    .board { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 3fr); gap: 16px; padding: 16px 0; align-items: stretch; }
     /* Columns match height while all roles are collapsed; once a role is opened, Experience grows on its own */
     .board:has(details[open]) { align-items: start; }
     .col { background: var(--white); border: 1px solid var(--line); border-top: 4px solid var(--blue); border-radius: 6px; padding: 14px 16px; }
@@ -74,8 +74,7 @@
       padding: 7px 10px; border-radius: 4px; background: var(--blue-soft);
     }
     .role-line { display: flex; justify-content: space-between; gap: 4px 12px; }
-    .role-sum { display: block; font-size: 13px; color: var(--text); margin: 2px 0 0 14px; }
-    .hint { text-transform: none; letter-spacing: 0; font-weight: 400; }    details.role > summary::-webkit-details-marker { display: none; }
+    .role-sum { display: block; font-size: 13px; color: var(--text); margin: 2px 0 0 14px; }    details.role > summary::-webkit-details-marker { display: none; }
     details.role > summary:hover { background: #DCE8F8; }
     .role-title { font-weight: 600; font-size: 14px; color: var(--blue); }
     .role-title::before { content: "+"; display: inline-block; width: 14px; font-weight: 700; }
@@ -149,7 +148,7 @@
       </section>
 
       <section class="col" id="experience" aria-labelledby="h-experience">
-        <h2 id="h-experience">Experience <span class="meta hint">· click a role for details</span></h2>
+        <h2 id="h-experience">Experience</h2>
 
         <div class="org">
           <div class="org-head">
