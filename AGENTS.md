@@ -11,6 +11,7 @@ Rules for any AI agent working on this site (coding-finance.github.io), the pers
 - Acronyms are approved on the site (e.g., IB, HC, GTM, ICs, SC, S&M, SMIF, ALPFA, FLDP, SFA, Sr., vs.) in place of the CV's spelled-out words. Use `<abbr title="...">` for less common ones. "FLDP" appears only in the role titles (full name on hover), with no separate label.
 - Exception: no "Memberships" lines anywhere on the site (Emanuelle removed them for CBS and Seton Hall). The GMAT score is intentionally not shown. Abbreviating is the only allowed change to bullet wording.
 - If the site and the CV disagree, flag it to Emanuelle. Do not silently "fix" either one.
+- Exception: CBS "Leadership" reads "Investment Banking Club VP of Finance" (CV says AVP; Emanuelle changed it to VP).
 - Exception: Seton Hall "Leadership" lists only Hall Street Fund Vice President (SMIF and ALPFA are intentionally left off). Approved by Emanuelle.
 - Site sections, in order: Education, Experience. The CV's Additional Information section is intentionally left off the site (Emanuelle's choice).
 
@@ -43,6 +44,7 @@ Rules for any AI agent working on this site (coding-finance.github.io), the pers
 ## Style
 
 - Professional and restrained. This is a finance and investment banking profile, not a portfolio of effects.
+- Exception: the small paper plane with a dashed loop trail on the "Send Message" button's top-right corner (it nudges up-right on hover) is approved by Emanuelle. Keep it the only decorative touch, along with the ✈️ favicon.
 - Colors: blue, white, black only (plus grays derived from them). Primary blue `#0B3D91`, accent blue `#1E6FD9`, black `#0A0A0A`, white `#FFFFFF`.
 - Typography: one clean sans-serif family; clear hierarchy; no decorative fonts. Inter is self-hosted from `fonts/` (license in `fonts/OFL.txt`); do not load fonts from Google or other CDNs.
 - Link previews: Open Graph tags in `<head>` use the headshot and the tagline. Keep `og:description` and the meta description in sync with the header tagline.
