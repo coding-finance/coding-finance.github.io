@@ -44,7 +44,7 @@ Rules for any AI agent working on this site (coding-finance.github.io), the pers
 ## Style
 
 - Professional and restrained. This is a finance and investment banking profile, not a portfolio of effects.
-- Exception: a 📨 emoji after the "Send Message" button text and the ✈️ favicon are approved by Emanuelle. No other decorative touches (a drawn SVG plane was tried and rejected).
+- Exception: the ✈️ favicon is the only decorative touch approved by Emanuelle. The "Send Message" button is plain text (a drawn plane and button emojis were tried and rejected).
 - Colors: blue, white, black only (plus grays derived from them). Primary blue `#0B3D91`, accent blue `#1E6FD9`, black `#0A0A0A`, white `#FFFFFF`.
 - Typography: one clean sans-serif family; clear hierarchy; no decorative fonts. Inter is self-hosted from `fonts/` (license in `fonts/OFL.txt`); do not load fonts from Google or other CDNs.
 - Link previews: Open Graph tags in `<head>` use the headshot and the tagline. Keep `og:description` and the meta description in sync with the header tagline.
