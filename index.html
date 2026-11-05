@@ -59,23 +59,12 @@
     .headshot { width: 96px; height: 96px; flex-shrink: 0; border-radius: 50%; object-fit: cover; border: 3px solid var(--white); }
     .hero h1 { font-size: clamp(1.6rem, 3vw, 2.2rem); line-height: 1.15; margin: 0 0 4px; letter-spacing: -.01em; }
     .hero p.lede { margin: 0; color: #DCE6F7; font-size: 15px; }
-    .links { display: flex; flex-wrap: wrap; gap: 8px 14px; margin-left: auto; flex-shrink: 0; }
+    .links { display: flex; flex-wrap: wrap; gap: 8px; margin-left: auto; flex-shrink: 0; }
     .btn { display: inline-block; padding: 7px 14px; border-radius: 4px; font-weight: 600; font-size: 14px; text-decoration: none; border: 2px solid var(--white); }
     .btn.solid { background: var(--white); color: var(--blue); }
     .btn.ghost { color: var(--white); }
     .btn:hover { background: var(--black); color: var(--white); border-color: var(--black); }
 
-    /* Little paper plane perched on the Send Message button's corner */
-    .btn-msg { position: relative; }
-    .btn-msg .plane {
-      position: absolute; top: -33px; right: -16px; width: 50px; height: 36px;
-      pointer-events: none; overflow: visible;
-      transform: rotate(-8deg);
-      transition: transform .45s cubic-bezier(.34, 1.56, .64, 1);
-    }
-    .btn-msg .plane .trail { stroke-dasharray: 2.5 2.5; opacity: .85; transition: opacity .3s; }
-    .btn-msg:hover .plane, .btn-msg:focus-visible .plane { transform: translate(5px, -5px) rotate(4deg); }
-    .btn-msg:hover .plane .trail, .btn-msg:focus-visible .plane .trail { opacity: 1; }
 
     /* Three-column board */
     .board { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 16px; padding-top: 16px; padding-bottom: 16px; align-items: stretch; }
@@ -124,11 +113,10 @@
     }
     @media (max-width: 680px) {
       .hero-inner { flex-wrap: wrap; }
-      .links { margin-left: 0; margin-top: 12px; }
+      .links { margin-left: 0; }
       .headshot { width: 80px; height: 80px; }    }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
-      .btn-msg .plane { transition: none; }
     }
   </style>
 </head>
@@ -142,7 +130,7 @@
           <p class="lede">MBA Candidate at Columbia Business School<br>Incoming Investment Banking Associate at Citi</p>
         </div>
         <div class="links">
-          <a class="btn ghost btn-msg" href="mailto:esedita27@gsb.columbia.edu">Send Message<svg class="plane" viewBox="0 0 50 36" aria-hidden="true" focusable="false"><path class="trail" d="M6 35 C 9 27, 19 30, 20 22 C 21 14, 11 15, 13 21 C 15 27, 25 19, 30 13" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/><g transform="translate(28 0)"><path d="M20 1 1 9 8 11.5 20 1Z" fill="#FFFFFF"/><path d="M20 1 8 11.5 10 20 12.8 14.2 20 1Z" fill="#DCE6F7"/><path d="M20 1 1 9 8 11.5 10 20 12.8 14.2 20 1Z M8 11.5 20 1" fill="none" stroke="#0B3D91" stroke-width="1.1" stroke-linejoin="round"/></g></svg></a>
+          <a class="btn ghost" href="mailto:esedita27@gsb.columbia.edu">Send Message <span aria-hidden="true">📨</span></a>
           <a class="btn ghost" href="https://www.linkedin.com/in/emanuelle-sedita/" target="_blank" rel="noopener">LinkedIn</a>
         </div>
       </div>
