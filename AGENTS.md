@@ -8,7 +8,8 @@ Rules for any AI agent working on this site (coding-finance.github.io), the pers
 - Exception: Emanuelle supplied extra Johnson & Johnson content from an older resume (three more Manager bullets, the 2018–2020 program split into two roles, and the Jabil bullet). That content is approved and lives only in `index.html`.
 - Exception: each role on the site has an approved one-line summary (10–15 words) under its title. Summaries may only restate facts from that role's bullets; no new numbers or claims.
 - If the site and the CV disagree, flag it to Emanuelle. Do not silently "fix" either one.
-- Keep the CV's section order on the site: Education, Experience, Additional Information.
+- Exception: on the site, Seton Hall has a "Memberships" line holding Student Managed Investment Fund and Association of Latino Professionals For America; "Leadership" lists only Hall Street Fund Vice President. Approved by Emanuelle.
+- Site sections, in order: Education, Experience. The CV's Additional Information section is intentionally left off the site (Emanuelle's choice).
 
 ## Never publish
 
