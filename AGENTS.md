@@ -34,6 +34,12 @@ Rules for any AI agent working on this site (coding-finance.github.io), the pers
 - Before rewording CV bullets beyond formatting (e.g., shortening or changing claims).
 - Before adding new pages or sections not requested.
 
+## Hosting
+
+- Live at https://emanuellesedita.com (GitHub Pages, repo `coding-finance/coding-finance.github.io`, branch `main`, HTTPS enforced). `www` and `coding-finance.github.io` redirect there.
+- The `CNAME` file holds the custom domain. Never delete or edit it, or the domain link breaks.
+- DNS is managed by Emanuelle in Squarespace (4 A records to GitHub Pages IPs, `www` CNAME to `coding-finance.github.io`, plus a `_github-pages-challenge-coding-finance` TXT record for domain verification). Do not tell Emanuelle to remove these.
+
 ## Style
 
 - Professional and restrained. This is a finance and investment banking profile, not a portfolio of effects.
