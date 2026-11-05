@@ -5,11 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Emanuelle Sedita</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9C%88%EF%B8%8F%3C/text%3E%3C/svg%3E">
-  <meta name="description" content="Emanuelle Sedita: MBA in Finance candidate at Columbia Business School. Healthcare investment banking, MedTech strategy, and corporate finance.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <meta name="description" content="MBA Candidate at Columbia Business School. Incoming Investment Banking Associate at Citi.">
+  <link rel="canonical" href="https://emanuellesedita.com/">
+  <!-- Link previews (LinkedIn, iMessage, Slack, email) -->
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://emanuellesedita.com/">
+  <meta property="og:title" content="Emanuelle Sedita">
+  <meta property="og:description" content="MBA Candidate at Columbia Business School. Incoming Investment Banking Associate at Citi.">
+  <meta property="og:image" content="https://emanuellesedita.com/images/headshot.jpeg">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+  <meta property="og:image:alt" content="Portrait of Emanuelle Sedita">
+  <meta name="twitter:card" content="summary">
+  <link rel="preload" href="fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <style>
+    /* Inter (SIL Open Font License, see fonts/OFL.txt), self-hosted */
+    @font-face {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 100 900;
+      font-display: swap;
+      src: url("fonts/inter-latin-wght-normal.woff2") format("woff2");
+    }
     :root {
       --blue: #0B3D91;
       --blue-accent: #1E6FD9;
@@ -49,7 +66,7 @@
     .btn:hover { background: var(--black); color: var(--white); border-color: var(--black); }
 
     /* Three-column board */
-    .board { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 16px; padding: 16px 0; align-items: stretch; }
+    .board { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 16px; padding-top: 16px; padding-bottom: 16px; align-items: stretch; }
     /* Columns match height while all roles are collapsed; once a role is opened, Experience grows on its own */
     .board:has(details[open]) { align-items: start; }
     .col { background: var(--white); border: 1px solid var(--line); border-top: 4px solid var(--blue); border-radius: 6px; padding: 14px 16px; }
