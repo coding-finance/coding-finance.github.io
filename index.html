@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Emanuelle Sedita</title>
+  <meta name="description" content="Emanuelle Sedita: MBA in Finance candidate at Columbia Business School. Healthcare investment banking, MedTech strategy, and corporate finance.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --blue: #0B3D91;
+      --blue-accent: #1E6FD9;
+      --blue-soft: #EAF1FB;
+      --black: #0A0A0A;
+      --white: #FFFFFF;
+      --line: #D9DEE6;
+      --bg: #F6F8FB;
+      --text: #0A0A0A;
+      --muted: #4A4F57;
+      --max: 1240px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      font-size: 15px;
+      line-height: 1.5;
+      color: var(--text);
+      background: var(--bg);
+    }
+    a { color: var(--blue-accent); }
+    a:focus-visible, summary:focus-visible { outline: 3px solid var(--blue-accent); outline-offset: 2px; }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 16px; }
+
+    /* Header band */
+    .hero { background: var(--blue); color: var(--white); padding: 20px 0; }
+    .hero-inner { display: flex; align-items: center; gap: 24px; }
+    .headshot { width: 96px; height: 96px; flex-shrink: 0; border-radius: 50%; object-fit: cover; border: 3px solid var(--white); }
+    .hero h1 { font-size: clamp(1.6rem, 3vw, 2.2rem); line-height: 1.15; margin: 0 0 4px; letter-spacing: -.01em; }
+    .hero p.lede { margin: 0; color: #DCE6F7; font-size: 15px; }
+    .links { display: flex; flex-wrap: wrap; gap: 8px; margin-left: auto; flex-shrink: 0; }
+    .btn { display: inline-block; padding: 7px 14px; border-radius: 4px; font-weight: 600; font-size: 14px; text-decoration: none; border: 2px solid var(--white); }
+    .btn.solid { background: var(--white); color: var(--blue); }
+    .btn.ghost { color: var(--white); }
+    .btn:hover { background: var(--black); color: var(--white); border-color: var(--black); }
+
+    /* Three-column board */
+    .board { display: grid; grid-template-columns: 1fr 2fr; gap: 16px; padding: 16px 0; align-items: start; }
+    .col { background: var(--white); border: 1px solid var(--line); border-top: 4px solid var(--blue); border-radius: 6px; padding: 14px 16px; }
+    .col h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .08em; margin: 0 0 10px; color: var(--blue); }
+    .org { padding: 10px 0; border-top: 1px solid var(--line); }
+    .col h2 + .org { border-top: 0; padding-top: 0; }
+    .org-head { display: flex; align-items: center; gap: 10px; }
+    .logo { height: 30px; width: auto; flex-shrink: 0; }
+    .org h3 { margin: 0; font-size: 15px; letter-spacing: .01em; }
+    .meta { color: var(--muted); font-size: 13px; }
+    .degree { margin: 6px 0 0; font-size: 14px; }
+    .degree .meta { display: block; }
+    dl.facts { margin: 6px 0 0; font-size: 13px; }
+    dl.facts dt { font-weight: 600; display: inline; }
+    dl.facts dt::after { content: ": "; }
+    dl.facts dd { display: inline; margin: 0; }
+    dl.facts dd::after { content: ""; display: block; margin-bottom: 3px; }
+
+    /* Roles: click to expand bullets */
+    details.role { margin-top: 6px; border-radius: 4px; }
+    details.role > summary {
+      list-style: none; cursor: pointer; display: block;
+      padding: 7px 10px; border-radius: 4px; background: var(--blue-soft);
+    }
+    .role-line { display: flex; justify-content: space-between; gap: 4px 12px; }
+    .role-sum { display: block; font-size: 13px; color: var(--text); margin: 2px 0 0 14px; }
+    .hint { text-transform: none; letter-spacing: 0; font-weight: 400; }
+    .col.wide { grid-column: 1 / -1; }
+    details.role > summary::-webkit-details-marker { display: none; }
+    details.role > summary:hover { background: #DCE8F8; }
+    .role-title { font-weight: 600; font-size: 14px; color: var(--blue); }
+    .role-title::before { content: "+"; display: inline-block; width: 14px; font-weight: 700; }
+    details[open] > summary .role-title::before { content: "–"; }
+    .role-dates { color: var(--muted); font-size: 13px; white-space: nowrap; }
+    details.role ul { margin: 6px 0 4px; padding-left: 20px; font-size: 13.5px; }
+    details.role li { margin-bottom: 4px; }
+
+    footer { background: var(--black); color: #C9D6EA; padding: 12px 0; font-size: 13px; }
+    footer a { color: var(--white); }
+    footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px 16px; }
+
+    @media (max-width: 900px) {
+      .board { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 680px) {
+      .hero-inner { flex-wrap: wrap; }
+      .links { margin-left: 0; }
+      .headshot { width: 80px; height: 80px; }
+      .role-line { flex-wrap: wrap; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+  <main id="top">
+    <header class="hero">
+      <div class="wrap hero-inner">
+        <img class="headshot" src="image.jpeg" alt="Portrait of Emanuelle Sedita" width="96" height="96">
+        <div>
+          <h1>Emanuelle Sedita</h1>
+          <p class="lede">MBA in Finance candidate at Columbia Business School. Healthcare investment banking and MedTech strategy and finance.</p>
+        </div>
+        <div class="links">
+          <a class="btn solid" href="https://www.linkedin.com/in/emanuelle-sedita/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn ghost" href="https://github.com/coding-finance" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn ghost" href="mailto:esedita27@gsb.columbia.edu">Email</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="wrap board">
+      <section class="col" id="education" aria-labelledby="h-education">
+        <h2 id="h-education">Education</h2>
+
+        <div class="org">
+          <div class="org-head">
+            <img class="logo" src="logos/cbs.png" alt="Columbia Business School logo" width="61" height="30">
+            <div><h3>Columbia Business School</h3><span class="meta">New York, NY</span></div>
+          </div>
+          <p class="degree">MBA, Finance, May 2027 · GMAT Focus: 735 <span class="meta">2025 – 2027</span></p>
+          <dl class="facts">
+            <dt>Honors</dt><dd>Henry Kravis Scholar</dd>
+            <dt>Leadership</dt><dd>Investment Banking Club AVP of Finance</dd>
+            <dt>Memberships</dt><dd>Healthcare Industry Association, Football Club, Snow Sports Club, Gourmet Club, Poker Club, The Consortium</dd>
+          </dl>
+        </div>
+
+        <div class="org">
+          <div class="org-head">
+            <img class="logo" src="logos/setonhall.png" alt="Seton Hall University logo" width="81" height="30">
+            <div><h3>Seton Hall University</h3><span class="meta">South Orange, NJ</span></div>
+          </div>
+          <p class="degree">BBA, Finance and Economics, May 2018 <span class="meta">2014 – 2018</span></p>
+          <dl class="facts">
+            <dt>Honors</dt><dd>cum laude, Beta Alpha Psi</dd>
+            <dt>Leadership</dt><dd>Hall Street Fund Vice President, Student Managed Investment Fund, Association of Latino Professionals For America</dd>
+          </dl>
+        </div>
+      </section>
+
+      <section class="col" id="experience" aria-labelledby="h-experience">
+        <h2 id="h-experience">Experience <span class="meta hint">· click a role for details</span></h2>
+
+        <div class="org">
+          <div class="org-head">
+            <img class="logo" src="logos/citi.png" alt="Citi logo" width="46" height="30">
+            <div><h3>Citi</h3><span class="meta">New York, NY</span></div>
+          </div>
+          <details class="role">
+            <summary><span class="role-line"><span class="role-title">Healthcare Investment Banking – Summer Associate</span><span class="role-dates">Summer 2026</span></span><span class="role-sum">Modeling, diligence, and client materials on five live healthcare mandates totaling $60B+.</span></summary>
+            <ul>
+              <li>Supported execution of five live buy-side and sell-side mandates across MedTech, Biopharma, and Healthcare Services totaling $60B+ in expected transaction value through financial modeling, due diligence and various client presentation materials</li>
+              <li>Drafted business and MD&amp;A sections of a Form 10 registration statement for a ~$20B planned MedTech separation, coordinating inputs across company management, legal counsel, and senior deal team</li>
+              <li>Independently authored a 24-page strategic alternatives pitch on Solventum recommending a tax-free spin of its HIS segment versus a ~$7.1B sale; built DCF, LBO, comps, precedents, and SOTP models quantifying strategic decision making</li>
+            </ul>
+          </details>
+        </div>
+
+        <div class="org">
+          <div class="org-head">
+            <img class="logo" src="logos/jnj.png" alt="Johnson &amp; Johnson logo" width="78" height="30">
+            <div><h3>Johnson &amp; Johnson</h3><span class="meta">New Brunswick, NJ</span></div>
+          </div>
+
+          <details class="role">
+            <summary><span class="role-line"><span class="role-title">MedTech Global Strategic Insights – Manager</span><span class="role-dates">2024 – 2025</span></span><span class="role-sum">Led buy-side commercial diligence and built revenue models for $1B+ MedTech acquisitions.</span></summary>
+            <ul>
+              <li>Led cross-functional buy-side commercial diligence across wound care, focal energy oncology, robotics, and Open/MIS external innovation targets for investment committees including CEO, CFO, BD, and Commercial leadership within a ~$32B portfolio</li>
+              <li>Built bottom-up US/OUS revenue models for $1B+ acquisitions/R&amp;D projects; delivered base/upside/downside models with tornado sensitivities to support NBIO/BO valuations, influence deal terms/structure, and overall go-to-market integration strategy</li>
+              <li>Led C-suite/banker diligence calls and directed external consultants for KOL research to validate competitive conversions, surgeon specialty behavior, and product market landscapes tightening peak and competitive market-share capture in revenue models</li>
+              <li>Triangulated IQVIA claims, competitive diligence, and KOL research to size $2B+ TAM/SAM into SOM and peak-share ramps</li>
+              <li>Produced executive fact packs that bridged revenue assumptions, projections, and market insights for CEO/CFO/BD IC</li>
+              <li>Aligned Regulatory, Finance, BD, and Commercial leadership on product landscape, go-to-market strategy, and launch timing</li>
+            </ul>
+          </details>
+          <details class="role">
+            <summary><span class="role-line"><span class="role-title">MedTech Surgery Strategic Customer Group – Senior Financial Analyst</span><span class="role-dates">2022 – 2024</span></span><span class="role-sum">Built customer P&amp;L and GPO pricing-tier models across ~$5.6B in MedTech Surgery sales.</span></summary>
+            <ul>
+              <li>Developed financial analytics to support leadership’s major pricing strategy shift in the MedTech Surgery portfolio and sales/account management personnel restructuring contributing ~$50M in top-line growth for FY’25 enabling 250+ new hires</li>
+              <li>Owned individual customer P&amp;L’s and created GPO pricing-tier models across ~$5.6B sales; drove portfolio-level price actions and led weekly exec reviews to align leadership in strategic pricing/deals to accelerate decisions</li>
+              <li>Optimized volume/mix/price financial strategy and supported negotiation of contracts/bundles driving ~$200M in revenue</li>
+            </ul>
+          </details>
+
+          <details class="role">
+            <summary><span class="role-line"><span class="role-title">MedTech Orthopedics Commercial Excellence – Senior Financial Analyst</span><span class="role-dates">2021 – 2022</span></span><span class="role-sum">Managed ~$1.3B in commercial budgets and led analysis for a sales force restructuring.</span></summary>
+            <ul>
+              <li>Managed ~$1.3B in commercial sales and marketing budgets supporting ~$5.2B in revenue; developed in-depth knowledge of tiered and product-specific compensation plans for ~2.7K headcount through cross-functional partnership with senior leadership</li>
+              <li>Led financial analysis for a sales force restructuring enabling ~$25M investment into hiring 100+ new sales resources</li>
+              <li>Partnered with senior finance management on developing and presenting quarterly results to the US MedTech CFO</li>
+            </ul>
+          </details>
+
+          <details class="role">
+            <summary><span class="role-line"><span class="role-title">Corporate Functions – Financial Analyst (Finance Leadership Development Program)</span><span class="role-dates">2019 – 2020</span></span><span class="role-sum">Managed $60M in talent development and recruitment budgets and solved a $2M gap.</span></summary>
+            <ul>
+              <li>Managed $60M in talent development and recruitment budgets using revamped quarterly reporting packages and Tableau dashboards; identified and addressed budget risks and opportunities across headcount, travel, and project spend</li>
+              <li>Demonstrated strategic financial leadership to solve $2M gap, prioritize key projects, and restructure talent teams</li>
+            </ul>
+          </details>
+
+          <details class="role">
+            <summary><span class="role-line"><span class="role-title">MedTech Supply Chain FP&amp;A – Associate Financial Analyst (Finance Leadership Development Program)</span><span class="role-dates">2018 – 2019</span></span><span class="role-sum">Reported on ~$6B in worldwide P&amp;L and directed budgets for a $300M Jabil initiative.</span></summary>
+            <ul>
+              <li>Consolidated decks, developed reporting, and provided commentary for ~$6B in worldwide P&amp;L statements, cost improvement projects, and supply chain finance metrics delivered directly to the US MedTech Supply Chain CFO/VPs</li>
+              <li>Lead analyst directing budgets for a major $300M supply chain initiative outsourcing product production to Jabil</li>
+            </ul>
+          </details>
+        </div>
+      </section>
+
+      <section class="col wide" id="additional" aria-labelledby="h-additional">
+        <h2 id="h-additional">Additional Information</h2>
+        <dl class="facts">
+          <dt>Volunteering</dt><dd>Finance Latino Leadership Council Lead Recruiter, NYC Campus Shuttle Co-Founder, Hoboken Homeless Shelter</dd>
+          <dt>Interests</dt><dd>Aircraft, Cars, Motorcycles, Travel, AI &amp; Prediction Markets, Poker, Italian Food, Tennis, Football, Soccer, Baseball, Golf</dd>
+        </dl>
+      </section>
+    </div>
+  </main>
+
+  <footer id="contact">
+    <div class="wrap">
+      <span>© 2026 Emanuelle Sedita</span>
+      <span>
+        <a href="mailto:esedita27@gsb.columbia.edu">esedita27@gsb.columbia.edu</a> ·
+        <a href="https://www.linkedin.com/in/emanuelle-sedita/" target="_blank" rel="noopener">LinkedIn</a> ·
+        <a href="https://github.com/coding-finance" target="_blank" rel="noopener">GitHub</a>
+      </span>
+    </div>
+  </footer>
+</body>
+</html>

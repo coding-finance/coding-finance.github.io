@@ -1,0 +1,41 @@
+# AGENTS.md
+
+Rules for any AI agent working on this site (coding-finance.github.io), the personal website of Emanuelle Sedita.
+
+## Source of truth
+
+- `cv.pdf` is the source for all career content. Do not invent, round, or embellish numbers, titles, dates, or employers.
+- Exception: Emanuelle supplied extra Johnson & Johnson content from an older resume (three more Manager bullets, the 2018–2020 program split into two roles, and the Jabil bullet). That content is approved and lives only in `index.html`.
+- Exception: each role on the site has an approved one-line summary (10–15 words) under its title. Summaries may only restate facts from that role's bullets; no new numbers or claims.
+- If the site and the CV disagree, flag it to Emanuelle. Do not silently "fix" either one.
+- Keep the CV's section order on the site: Education, Experience, Additional Information.
+
+## Never publish
+
+- Phone number, home address, date of birth, or any government ID.
+- Personal (non-school, non-work) email addresses unless Emanuelle provides one for the site.
+- Salary, compensation, or offer details.
+- Non-public deal information: client names, deal sizes, or deal terms that are not already on the CV. Never add detail beyond what the CV says.
+- Confidential employer material (Citi, Johnson & Johnson): internal documents, decks, models, screenshots. (Public company and school logos in `logos/` are approved by Emanuelle for identifying employers and schools.)
+- Secrets of any kind: API keys, tokens, passwords, `.env` files.
+- Photos of other people, or names of colleagues, classmates, or references.
+
+## Ask Emanuelle first
+
+- Before any `git commit`, `git push`, or change to GitHub settings, repos, or GitHub Pages.
+- Before publishing or committing `cv.pdf` itself (it contains the phone number).
+- Before adding any contact detail, photo, or social profile not already approved. Approved so far: Columbia email, LinkedIn (https://www.linkedin.com/in/emanuelle-sedita/), GitHub (https://github.com/coding-finance), headshot (`image.jpeg`).
+- Before deleting or overwriting existing files.
+- Before adding third-party scripts, analytics, trackers, cookies, or forms.
+- Before rewording CV bullets beyond formatting (e.g., shortening or changing claims).
+- Before adding new pages or sections not requested.
+
+## Style
+
+- Professional and restrained. This is a finance and investment banking profile, not a portfolio of effects.
+- Colors: blue, white, black only (plus grays derived from them). Primary blue `#0B3D91`, accent blue `#1E6FD9`, black `#0A0A0A`, white `#FFFFFF`.
+- Typography: one clean sans-serif family; clear hierarchy; no decorative fonts.
+- Navigation: no separate navigation bar. The page is a single screen; contact links (LinkedIn, GitHub, Email) sit in the blue header.
+- Plain static HTML and CSS. No frameworks or build steps unless Emanuelle asks.
+- Must work on phones (no horizontal scroll) and be accessible: semantic HTML, alt text, visible focus states, sufficient contrast.
+- Writing: plain language, no buzzwords, no exaggeration. Keep CV wording as written.
