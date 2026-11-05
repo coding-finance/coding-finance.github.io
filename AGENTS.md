@@ -6,7 +6,7 @@ Rules for any AI agent working on this site (coding-finance.github.io), the pers
 
 - `cv.pdf` is the source for all career content. Do not invent, round, or embellish numbers, titles, dates, or employers.
 - Exception: Emanuelle supplied extra Johnson & Johnson content from an older resume (three more Manager bullets, the 2018–2020 program split into two roles, and the Jabil bullet). That content is approved and lives only in `index.html`.
-- Exception: the header tagline "MBA Candidate at Columbia Business School | Incoming Investment Banking Associate at Citi" was written by Emanuelle and is approved, even though "Incoming Associate" is not on the CV. Do not add any other offer details.
+- Exception: the header tagline (two lines: "MBA Candidate at Columbia Business School" / "Incoming Investment Banking Associate at Citi") was written by Emanuelle and is approved, even though "Incoming Associate" is not on the CV. Do not add any other offer details.
 - Roles show title and dates only (no one-line summaries). Emanuelle removed them to cut text.
 - Acronyms are approved on the site (e.g., IB, HC, GTM, ICs, SC, S&M, SMIF, ALPFA, FLDP, Sr., vs.) in place of the CV's spelled-out words. Use `<abbr title="...">` for less common ones. "FLDP" appears only in the role titles (full name on hover), with no separate label.
 - Exception (Emanuelle's edits to CBS): Memberships read "HCIA, Football Club, Ski Club, Gourmet Club, Poker Club, The Consortium" (CV says Healthcare Industry Association and Snow Sports Club). The GMAT score is intentionally not shown. Abbreviating is the only allowed change to bullet wording.
@@ -30,7 +30,7 @@ Rules for any AI agent working on this site (coding-finance.github.io), the pers
 - Before publishing or committing `cv.pdf` itself (it contains the phone number).
 - Before adding any contact detail, photo, or social profile not already approved. Approved so far: Columbia email, LinkedIn (https://www.linkedin.com/in/emanuelle-sedita/), GitHub (https://github.com/coding-finance), headshot (`image.jpeg`).
 - Before deleting or overwriting existing files.
-- Before adding third-party scripts, analytics, trackers, cookies, or forms.
+- Before adding third-party scripts, analytics, trackers, cookies, or forms. Approved so far: GoatCounter (`https://gc.zgo.at/count.js`, dashboard at https://emanuellesedita.goatcounter.com). No cookies; no other analytics.
 - Before rewording CV bullets beyond formatting (e.g., shortening or changing claims).
 - Before adding new pages or sections not requested.
 
