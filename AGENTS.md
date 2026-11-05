@@ -20,7 +20,7 @@ Rules for any AI agent working on this site (coding-finance.github.io), the pers
 - Personal (non-school, non-work) email addresses unless Emanuelle provides one for the site.
 - Salary, compensation, or offer details.
 - Non-public deal information: client names, deal sizes, or deal terms that are not already on the CV. Never add detail beyond what the CV says.
-- Confidential employer material (Citi, Johnson & Johnson): internal documents, decks, models, screenshots. (Public company and school logos in `logos/` are approved by Emanuelle for identifying employers and schools.)
+- Confidential employer material (Citi, Johnson & Johnson): internal documents, decks, models, screenshots. (Public company and school logos in `images/logos/` are approved by Emanuelle for identifying employers and schools.)
 - Secrets of any kind: API keys, tokens, passwords, `.env` files.
 - Photos of other people, or names of colleagues, classmates, or references.
 
@@ -28,7 +28,7 @@ Rules for any AI agent working on this site (coding-finance.github.io), the pers
 
 - Before any `git commit`, `git push`, or change to GitHub settings, repos, or GitHub Pages.
 - Before publishing or committing `cv.pdf` itself (it contains the phone number).
-- Before adding any contact detail, photo, or social profile not already approved. Approved so far: Columbia email, LinkedIn (https://www.linkedin.com/in/emanuelle-sedita/), GitHub (https://github.com/coding-finance), headshot (`image.jpeg`).
+- Before adding any contact detail, photo, or social profile not already approved. Approved so far: Columbia email, LinkedIn (https://www.linkedin.com/in/emanuelle-sedita/), GitHub (https://github.com/coding-finance), headshot (`images/headshot.jpeg`).
 - Before deleting or overwriting existing files.
 - Before adding third-party scripts, analytics, trackers, cookies, or forms. Approved so far: GoatCounter (`https://gc.zgo.at/count.js`, dashboard at https://emanuellesedita.goatcounter.com). No cookies; no other analytics.
 - Before rewording CV bullets beyond formatting (e.g., shortening or changing claims).
