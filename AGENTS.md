@@ -9,9 +9,9 @@ Rules for any AI agent working on this site (coding-finance.github.io), the pers
 - Exception: the header tagline (two lines: "MBA Candidate at Columbia Business School" / "Incoming Investment Banking Associate at Citi") was written by Emanuelle and is approved, even though "Incoming Associate" is not on the CV. Do not add any other offer details.
 - Roles show title and dates only (no one-line summaries). Emanuelle removed them to cut text.
 - Acronyms are approved on the site (e.g., IB, HC, GTM, ICs, SC, S&M, SMIF, ALPFA, FLDP, Sr., vs.) in place of the CV's spelled-out words. Use `<abbr title="...">` for less common ones. "FLDP" appears only in the role titles (full name on hover), with no separate label.
-- Exception (Emanuelle's edits to CBS): Memberships read "HCIA, Football Club, Ski Club, Gourmet Club, Poker Club, The Consortium" (CV says Healthcare Industry Association and Snow Sports Club). The GMAT score is intentionally not shown. Abbreviating is the only allowed change to bullet wording.
+- Exception: no "Memberships" lines anywhere on the site (Emanuelle removed them for CBS and Seton Hall). The GMAT score is intentionally not shown. Abbreviating is the only allowed change to bullet wording.
 - If the site and the CV disagree, flag it to Emanuelle. Do not silently "fix" either one.
-- Exception: on the site, Seton Hall has a "Memberships" line holding Student Managed Investment Fund and Association of Latino Professionals For America; "Leadership" lists only Hall Street Fund Vice President. Approved by Emanuelle.
+- Exception: Seton Hall "Leadership" lists only Hall Street Fund Vice President (SMIF and ALPFA are intentionally left off). Approved by Emanuelle.
 - Site sections, in order: Education, Experience. The CV's Additional Information section is intentionally left off the site (Emanuelle's choice).
 
 ## Never publish

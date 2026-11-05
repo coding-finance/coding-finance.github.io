@@ -91,13 +91,14 @@
       list-style: none; cursor: pointer; display: block;
       padding: 7px 10px; border-radius: 4px; background: var(--blue-soft);
     }
-    .role-line { display: flex; justify-content: space-between; gap: 4px 12px; }
+    /* Title wraps inside its own box; dates always stay pinned top-right */
+    .role-line { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
     details.role > summary::-webkit-details-marker { display: none; }
     details.role > summary:hover { background: #DCE8F8; }
-    .role-title { font-weight: 600; font-size: 14px; color: var(--blue); }
-    .role-title::before { content: "+"; display: inline-block; width: 14px; font-weight: 700; }
+    .role-title { flex: 1 1 auto; min-width: 0; font-weight: 600; font-size: 14px; color: var(--blue); padding-left: 14px; text-indent: -14px; }
+    .role-title::before { content: "+"; display: inline-block; width: 14px; font-weight: 700; text-indent: 0; }
     details[open] > summary .role-title::before { content: "–"; }
-    .role-dates { color: var(--muted); font-size: 13px; white-space: nowrap; }
+    .role-dates { flex: 0 0 auto; color: var(--muted); font-size: 13px; white-space: nowrap; text-align: right; }
     details.role ul { margin: 6px 0 4px; padding-left: 20px; font-size: 13.5px; }
     details.role li { margin-bottom: 4px; }
     abbr[title] { text-decoration: none; cursor: help; }
@@ -112,9 +113,7 @@
     @media (max-width: 680px) {
       .hero-inner { flex-wrap: wrap; }
       .links { margin-left: 0; }
-      .headshot { width: 80px; height: 80px; }
-      .role-line { flex-wrap: wrap; }
-    }
+      .headshot { width: 80px; height: 80px; }    }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
   </style>
 </head>
@@ -147,7 +146,6 @@
           <dl class="facts">
             <dt>Honors</dt><dd>Henry Kravis Scholar</dd>
             <dt>Leadership</dt><dd><abbr title="Investment Banking">IB</abbr> Club <abbr title="Assistant Vice President">AVP</abbr> of Finance</dd>
-            <dt>Memberships</dt><dd><abbr title="Healthcare Industry Association">HCIA</abbr>, Football Club, Ski Club, Gourmet Club, Poker Club, The Consortium</dd>
           </dl>
         </div>
 
@@ -160,7 +158,6 @@
           <dl class="facts">
             <dt>Honors</dt><dd>cum laude, Beta Alpha Psi</dd>
             <dt>Leadership</dt><dd>Hall Street Fund <abbr title="Vice President">VP</abbr></dd>
-            <dt>Memberships</dt><dd><abbr title="Student Managed Investment Fund">SMIF</abbr>, <abbr title="Association of Latino Professionals For America">ALPFA</abbr></dd>
           </dl>
         </div>
       </section>
