@@ -8,7 +8,7 @@ Rules for any AI agent working on this site (coding-finance.github.io), the pers
 - Exception: Emanuelle supplied extra Johnson & Johnson content from an older resume (three more Manager bullets, the 2018–2020 program split into two roles, and the Jabil bullet). That content is approved and lives only in `index.html`.
 - Exception: the header tagline (two lines: "MBA Candidate at Columbia Business School" / "Incoming Investment Banking Associate at Citi") was written by Emanuelle and is approved, even though "Incoming Associate" is not on the CV. Do not add any other offer details.
 - Roles show title and dates only (no one-line summaries). Emanuelle removed them to cut text.
-- Acronyms are approved on the site (e.g., IB, HC, GTM, ICs, SC, S&M, SMIF, ALPFA, FLDP, SFA, Sr., vs.) in place of the CV's spelled-out words. Use `<abbr title="...">` for less common ones. "FLDP" appears only in the role titles (full name on hover), with no separate label.
+- Acronyms are approved on the site (e.g., IB, HC, GTM, ICs, SC, S&M, SMIF, ALPFA, FLDP, SFA, FA, AFA, Sr., vs.) in place of the CV's spelled-out words. Use `<abbr title="...">` for less common ones. "FLDP" appears only in the role titles (full name on hover), with no separate label.
 - Exception: no "Memberships" lines anywhere on the site (Emanuelle removed them for CBS and Seton Hall). The GMAT score is intentionally not shown. Abbreviating is the only allowed change to bullet wording.
 - If the site and the CV disagree, flag it to Emanuelle. Do not silently "fix" either one.
 - Exception: CBS "Leadership" reads "Investment Banking Club VP of Finance" (CV says AVP; Emanuelle changed it to VP).
