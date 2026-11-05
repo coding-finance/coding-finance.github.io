@@ -6,7 +6,10 @@ Rules for any AI agent working on this site (coding-finance.github.io), the pers
 
 - `cv.pdf` is the source for all career content. Do not invent, round, or embellish numbers, titles, dates, or employers.
 - Exception: Emanuelle supplied extra Johnson & Johnson content from an older resume (three more Manager bullets, the 2018–2020 program split into two roles, and the Jabil bullet). That content is approved and lives only in `index.html`.
-- Exception: each role on the site has an approved one-line summary (10–15 words) under its title. Summaries may only restate facts from that role's bullets; no new numbers or claims.
+- Exception: the header tagline "MBA Candidate at Columbia Business School | Incoming Investment Banking Associate at Citi" was written by Emanuelle and is approved, even though "Incoming Associate" is not on the CV. Do not add any other offer details.
+- Roles show title and dates only (no one-line summaries). Emanuelle removed them to cut text.
+- Acronyms are approved on the site (e.g., IB, HC, GTM, ICs, SC, S&M, SMIF, ALPFA, FLDP, Sr., vs.) in place of the CV's spelled-out words. Use `<abbr title="...">` for less common ones. "FLDP" appears only in the role titles (full name on hover), with no separate label.
+- Exception (Emanuelle's edits to CBS): Memberships read "HCIA, Football Club, Ski Club, Gourmet Club, Poker Club, The Consortium" (CV says Healthcare Industry Association and Snow Sports Club). The GMAT score is intentionally not shown. Abbreviating is the only allowed change to bullet wording.
 - If the site and the CV disagree, flag it to Emanuelle. Do not silently "fix" either one.
 - Exception: on the site, Seton Hall has a "Memberships" line holding Student Managed Investment Fund and Association of Latino Professionals For America; "Leadership" lists only Hall Street Fund Vice President. Approved by Emanuelle.
 - Site sections, in order: Education, Experience. The CV's Additional Information section is intentionally left off the site (Emanuelle's choice).
@@ -39,4 +42,4 @@ Rules for any AI agent working on this site (coding-finance.github.io), the pers
 - Navigation: no separate navigation bar. The page is a single screen; contact links (LinkedIn, GitHub, Email) sit in the blue header.
 - Plain static HTML and CSS. No frameworks or build steps unless Emanuelle asks.
 - Must work on phones (no horizontal scroll) and be accessible: semantic HTML, alt text, visible focus states, sufficient contrast.
-- Writing: plain language, no buzzwords, no exaggeration. Keep CV wording as written.
+- Writing: plain language, no buzzwords, no exaggeration. Keep CV wording as written, except approved acronyms. Keep text light; Emanuelle prefers less text on screen.

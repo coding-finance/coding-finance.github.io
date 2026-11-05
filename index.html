@@ -48,7 +48,7 @@
     .btn:hover { background: var(--black); color: var(--white); border-color: var(--black); }
 
     /* Three-column board */
-    .board { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 3fr); gap: 16px; padding: 16px 0; align-items: stretch; }
+    .board { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 16px; padding: 16px 0; align-items: stretch; }
     /* Columns match height while all roles are collapsed; once a role is opened, Experience grows on its own */
     .board:has(details[open]) { align-items: start; }
     .col { background: var(--white); border: 1px solid var(--line); border-top: 4px solid var(--blue); border-radius: 6px; padding: 14px 16px; }
@@ -74,7 +74,7 @@
       padding: 7px 10px; border-radius: 4px; background: var(--blue-soft);
     }
     .role-line { display: flex; justify-content: space-between; gap: 4px 12px; }
-    .role-sum { display: block; font-size: 13px; color: var(--text); margin: 2px 0 0 14px; }    details.role > summary::-webkit-details-marker { display: none; }
+    details.role > summary::-webkit-details-marker { display: none; }
     details.role > summary:hover { background: #DCE8F8; }
     .role-title { font-weight: 600; font-size: 14px; color: var(--blue); }
     .role-title::before { content: "+"; display: inline-block; width: 14px; font-weight: 700; }
@@ -82,6 +82,7 @@
     .role-dates { color: var(--muted); font-size: 13px; white-space: nowrap; }
     details.role ul { margin: 6px 0 4px; padding-left: 20px; font-size: 13.5px; }
     details.role li { margin-bottom: 4px; }
+    abbr[title] { text-decoration: none; cursor: help; }
 
     footer { background: var(--black); color: #C9D6EA; padding: 12px 0; font-size: 13px; }
     footer a { color: var(--white); }
@@ -106,10 +107,10 @@
         <img class="headshot" src="image.jpeg" alt="Portrait of Emanuelle Sedita" width="96" height="96">
         <div>
           <h1>Emanuelle Sedita</h1>
-          <p class="lede">MBA in Finance candidate at Columbia Business School. Healthcare investment banking and MedTech strategy and finance.</p>
+          <p class="lede">MBA Candidate at Columbia Business School | Incoming Investment Banking Associate at Citi</p>
         </div>
         <div class="links">
-          <a class="btn solid" href="https://www.linkedin.com/in/emanuelle-sedita/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn ghost" href="https://www.linkedin.com/in/emanuelle-sedita/" target="_blank" rel="noopener">LinkedIn</a>
           <a class="btn ghost" href="https://github.com/coding-finance" target="_blank" rel="noopener">GitHub</a>
           <a class="btn ghost" href="mailto:esedita27@gsb.columbia.edu">Email</a>
         </div>
@@ -125,11 +126,11 @@
             <img class="logo" src="logos/cbs.png" alt="Columbia Business School logo" width="61" height="30">
             <div><h3>Columbia Business School</h3><span class="meta">New York, NY</span></div>
           </div>
-          <p class="degree">MBA, Finance, May 2027 · GMAT Focus: 735 <span class="meta">2025 – 2027</span></p>
+          <p class="degree">MBA, Finance, May 2027 <span class="meta">2025 – 2027</span></p>
           <dl class="facts">
             <dt>Honors</dt><dd>Henry Kravis Scholar</dd>
-            <dt>Leadership</dt><dd>Investment Banking Club AVP of Finance</dd>
-            <dt>Memberships</dt><dd>Healthcare Industry Association, Football Club, Snow Sports Club, Gourmet Club, Poker Club, The Consortium</dd>
+            <dt>Leadership</dt><dd><abbr title="Investment Banking">IB</abbr> Club <abbr title="Assistant Vice President">AVP</abbr> of Finance</dd>
+            <dt>Memberships</dt><dd><abbr title="Healthcare Industry Association">HCIA</abbr>, Football Club, Ski Club, Gourmet Club, Poker Club, The Consortium</dd>
           </dl>
         </div>
 
@@ -138,11 +139,11 @@
             <img class="logo" src="logos/setonhall.png" alt="Seton Hall University logo" width="81" height="30">
             <div><h3>Seton Hall University</h3><span class="meta">South Orange, NJ</span></div>
           </div>
-          <p class="degree">BBA, Finance and Economics, May 2018 <span class="meta">2014 – 2018</span></p>
+          <p class="degree">BBA, Finance &amp; Economics, May 2018 <span class="meta">2014 – 2018</span></p>
           <dl class="facts">
             <dt>Honors</dt><dd>cum laude, Beta Alpha Psi</dd>
-            <dt>Leadership</dt><dd>Hall Street Fund Vice President</dd>
-            <dt>Memberships</dt><dd>Student Managed Investment Fund, Association of Latino Professionals For America</dd>
+            <dt>Leadership</dt><dd>Hall Street Fund <abbr title="Vice President">VP</abbr></dd>
+            <dt>Memberships</dt><dd><abbr title="Student Managed Investment Fund">SMIF</abbr>, <abbr title="Association of Latino Professionals For America">ALPFA</abbr></dd>
           </dl>
         </div>
       </section>
@@ -156,11 +157,11 @@
             <div><h3>Citi</h3><span class="meta">New York, NY</span></div>
           </div>
           <details class="role">
-            <summary><span class="role-line"><span class="role-title">Healthcare Investment Banking – Summer Associate</span><span class="role-dates">Summer 2026</span></span><span class="role-sum">Modeling, diligence, and client materials on five live healthcare mandates totaling $60B+.</span></summary>
+            <summary><span class="role-line"><span class="role-title">Healthcare <abbr title="Investment Banking">IB</abbr> – Summer Associate</span><span class="role-dates">Summer 2026</span></span></summary>
             <ul>
-              <li>Supported execution of five live buy-side and sell-side mandates across MedTech, Biopharma, and Healthcare Services totaling $60B+ in expected transaction value through financial modeling, due diligence and various client presentation materials</li>
+              <li>Supported execution of five live buy- and sell-side mandates across MedTech, Biopharma, and HC Services totaling $60B+ in expected transaction value through financial modeling, due diligence and various client presentation materials</li>
               <li>Drafted business and MD&amp;A sections of a Form 10 registration statement for a ~$20B planned MedTech separation, coordinating inputs across company management, legal counsel, and senior deal team</li>
-              <li>Independently authored a 24-page strategic alternatives pitch on Solventum recommending a tax-free spin of its HIS segment versus a ~$7.1B sale; built DCF, LBO, comps, precedents, and SOTP models quantifying strategic decision making</li>
+              <li>Independently authored a 24-page strategic alternatives pitch on Solventum recommending a tax-free spin of its HIS segment vs. a ~$7.1B sale; built DCF, LBO, comps, precedents, and SOTP models quantifying strategic decision making</li>
             </ul>
           </details>
         </div>
@@ -172,18 +173,19 @@
           </div>
 
           <details class="role">
-            <summary><span class="role-line"><span class="role-title">MedTech Global Strategic Insights – Manager</span><span class="role-dates">2024 – 2025</span></span><span class="role-sum">Led buy-side commercial diligence and built revenue models for $1B+ MedTech acquisitions.</span></summary>
+            <summary><span class="role-line"><span class="role-title">MedTech <abbr title="Global Strategic Insights">GSI</abbr> – Manager</span><span class="role-dates">2024 – 2025</span></span></summary>
             <ul>
-              <li>Led cross-functional buy-side commercial diligence across wound care, focal energy oncology, robotics, and Open/MIS external innovation targets for investment committees including CEO, CFO, BD, and Commercial leadership within a ~$32B portfolio</li>
-              <li>Built bottom-up US/OUS revenue models for $1B+ acquisitions/R&amp;D projects; delivered base/upside/downside models with tornado sensitivities to support NBIO/BO valuations, influence deal terms/structure, and overall go-to-market integration strategy</li>
+              <li>Led cross-functional buy-side commercial diligence across wound care, focal energy oncology, robotics, and Open/MIS external innovation targets for ICs including CEO, CFO, BD, and Commercial leadership within a ~$32B portfolio</li>
+              <li>Built bottom-up US/OUS revenue models for $1B+ acquisitions/R&amp;D projects; delivered base/upside/downside models with tornado sensitivities to support NBIO/BO valuations, influence deal terms/structure, and overall GTM integration strategy</li>
               <li>Led C-suite/banker diligence calls and directed external consultants for KOL research to validate competitive conversions, surgeon specialty behavior, and product market landscapes tightening peak and competitive market-share capture in revenue models</li>
               <li>Triangulated IQVIA claims, competitive diligence, and KOL research to size $2B+ TAM/SAM into SOM and peak-share ramps</li>
               <li>Produced executive fact packs that bridged revenue assumptions, projections, and market insights for CEO/CFO/BD IC</li>
-              <li>Aligned Regulatory, Finance, BD, and Commercial leadership on product landscape, go-to-market strategy, and launch timing</li>
+              <li>Aligned Regulatory, Finance, BD, and Commercial leadership on product landscape, GTM strategy, and launch timing</li>
             </ul>
           </details>
+
           <details class="role">
-            <summary><span class="role-line"><span class="role-title">MedTech Surgery Strategic Customer Group – Senior Financial Analyst</span><span class="role-dates">2022 – 2024</span></span><span class="role-sum">Built customer P&amp;L and GPO pricing-tier models across ~$5.6B in MedTech Surgery sales.</span></summary>
+            <summary><span class="role-line"><span class="role-title">MedTech Surgery <abbr title="Strategic Customer Group">SCG</abbr> – Sr. Financial Analyst</span><span class="role-dates">2022 – 2024</span></span></summary>
             <ul>
               <li>Developed financial analytics to support leadership’s major pricing strategy shift in the MedTech Surgery portfolio and sales/account management personnel restructuring contributing ~$50M in top-line growth for FY’25 enabling 250+ new hires</li>
               <li>Owned individual customer P&amp;L’s and created GPO pricing-tier models across ~$5.6B sales; drove portfolio-level price actions and led weekly exec reviews to align leadership in strategic pricing/deals to accelerate decisions</li>
@@ -192,16 +194,16 @@
           </details>
 
           <details class="role">
-            <summary><span class="role-line"><span class="role-title">MedTech Orthopedics Commercial Excellence – Senior Financial Analyst</span><span class="role-dates">2021 – 2022</span></span><span class="role-sum">Managed ~$1.3B in commercial budgets and led analysis for a sales force restructuring.</span></summary>
+            <summary><span class="role-line"><span class="role-title">MedTech Ortho Commercial Excellence – Sr. Financial Analyst</span><span class="role-dates">2021 – 2022</span></span></summary>
             <ul>
-              <li>Managed ~$1.3B in commercial sales and marketing budgets supporting ~$5.2B in revenue; developed in-depth knowledge of tiered and product-specific compensation plans for ~2.7K headcount through cross-functional partnership with senior leadership</li>
+              <li>Managed ~$1.3B in commercial S&amp;M budgets supporting ~$5.2B in revenue; developed in-depth knowledge of tiered and product-specific compensation plans for ~2.7K headcount through cross-functional partnership with senior leadership</li>
               <li>Led financial analysis for a sales force restructuring enabling ~$25M investment into hiring 100+ new sales resources</li>
               <li>Partnered with senior finance management on developing and presenting quarterly results to the US MedTech CFO</li>
             </ul>
           </details>
 
           <details class="role">
-            <summary><span class="role-line"><span class="role-title">Corporate Functions – Financial Analyst (Finance Leadership Development Program)</span><span class="role-dates">2019 – 2020</span></span><span class="role-sum">Managed $60M in talent development and recruitment budgets and solved a $2M gap.</span></summary>
+            <summary><span class="role-line"><span class="role-title">Corporate Functions – Financial Analyst (<abbr title="Finance Leadership Development Program">FLDP</abbr>)</span><span class="role-dates">2019 – 2020</span></span></summary>
             <ul>
               <li>Managed $60M in talent development and recruitment budgets using revamped quarterly reporting packages and Tableau dashboards; identified and addressed budget risks and opportunities across headcount, travel, and project spend</li>
               <li>Demonstrated strategic financial leadership to solve $2M gap, prioritize key projects, and restructure talent teams</li>
@@ -209,10 +211,10 @@
           </details>
 
           <details class="role">
-            <summary><span class="role-line"><span class="role-title">MedTech Supply Chain FP&amp;A – Associate Financial Analyst (Finance Leadership Development Program)</span><span class="role-dates">2018 – 2019</span></span><span class="role-sum">Reported on ~$6B in worldwide P&amp;L and directed budgets for a $300M Jabil initiative.</span></summary>
+            <summary><span class="role-line"><span class="role-title">MedTech <abbr title="Supply Chain">SC</abbr> FP&amp;A – Assoc. Financial Analyst (<abbr title="Finance Leadership Development Program">FLDP</abbr>)</span><span class="role-dates">2018 – 2019</span></span></summary>
             <ul>
-              <li>Consolidated decks, developed reporting, and provided commentary for ~$6B in worldwide P&amp;L statements, cost improvement projects, and supply chain finance metrics delivered directly to the US MedTech Supply Chain CFO/VPs</li>
-              <li>Lead analyst directing budgets for a major $300M supply chain initiative outsourcing product production to Jabil</li>
+              <li>Consolidated decks, developed reporting, and provided commentary for ~$6B in worldwide P&amp;L statements, cost improvement projects, and SC finance metrics delivered directly to the US MedTech SC CFO/VPs</li>
+              <li>Lead analyst directing budgets for a major $300M SC initiative outsourcing product production to Jabil</li>
             </ul>
           </details>
         </div>
