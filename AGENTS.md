@@ -45,7 +45,7 @@ Rules for any AI agent working on this site (coding-finance.github.io), the pers
 - Professional and restrained. This is a finance and investment banking profile, not a portfolio of effects.
 - Colors: blue, white, black only (plus grays derived from them). Primary blue `#0B3D91`, accent blue `#1E6FD9`, black `#0A0A0A`, white `#FFFFFF`.
 - Typography: one clean sans-serif family; clear hierarchy; no decorative fonts.
-- Navigation: no separate navigation bar. The page is a single screen; contact links (LinkedIn, GitHub, Email) sit in the blue header.
+- Navigation: no separate navigation bar. The page is a single screen; the blue header has two buttons, "Send Message" (mailto Columbia email) then "LinkedIn". No GitHub link on the site (Emanuelle's choice).
 - Plain static HTML and CSS. No frameworks or build steps unless Emanuelle asks.
 - Must work on phones (no horizontal scroll) and be accessible: semantic HTML, alt text, visible focus states, sufficient contrast.
 - Writing: plain language, no buzzwords, no exaggeration. Keep CV wording as written, except approved acronyms. Keep text light; Emanuelle prefers less text on screen.
