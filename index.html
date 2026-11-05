@@ -48,7 +48,9 @@
     .btn:hover { background: var(--black); color: var(--white); border-color: var(--black); }
 
     /* Three-column board */
-    .board { display: grid; grid-template-columns: 1fr 2fr; gap: 16px; padding: 16px 0; align-items: start; }
+    .board { display: grid; grid-template-columns: 1fr 2fr; gap: 16px; padding: 16px 0; align-items: stretch; }
+    /* Columns match height while all roles are collapsed; once a role is opened, Experience grows on its own */
+    .board:has(details[open]) { align-items: start; }
     .col { background: var(--white); border: 1px solid var(--line); border-top: 4px solid var(--blue); border-radius: 6px; padding: 14px 16px; }
     .col h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .08em; margin: 0 0 10px; color: var(--blue); }
     .org { padding: 10px 0; border-top: 1px solid var(--line); }
