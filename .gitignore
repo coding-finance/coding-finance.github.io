@@ -3,3 +3,7 @@ cv.pdf
 
 # Original logo files; the site uses trimmed copies in images/logos/
 images/originals/
+
+# Sleeper players cache used by scripts/update_fantasy.py (large, refetched daily)
+.cache/
+__pycache__/

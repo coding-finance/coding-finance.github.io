@@ -104,6 +104,92 @@
     details.role li { margin-bottom: 4px; }
     abbr[title] { text-decoration: none; cursor: help; }
 
+    /* Fantasy football: its own Sleeper-style look (dark panel, teal accent, condensed font).
+       Data from data/fantasy.json, rendered by js/fantasy.js. */
+    @font-face { font-family: "Barlow Condensed"; font-style: normal; font-weight: 500; font-display: swap; src: url("fonts/barlow-condensed-latin-500-normal.woff2") format("woff2"); }
+    @font-face { font-family: "Barlow Condensed"; font-style: normal; font-weight: 700; font-display: swap; src: url("fonts/barlow-condensed-latin-700-normal.woff2") format("woff2"); }
+    .ff-wrap { padding-bottom: 16px; }
+    .ff {
+      --ff-bg: #10161F; --ff-row: #161E2A; --ff-line: #243042; --ff-text: #E8EEF6; --ff-mute: #8D9AAD; --ff-acc: #1FD1C1; --ff-red: #FF5C6C;
+      background: var(--ff-bg); color: var(--ff-text); border-radius: 10px; padding: 8px 10px 6px;
+      font-family: "Barlow Condensed", "Arial Narrow", system-ui, sans-serif; font-weight: 500; letter-spacing: .01em;
+    }
+    .ff-top { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; padding: 0 4px 6px; }
+    .ff-top h2 { margin: 0; font-size: 13px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--ff-acc); }
+    .ff-note { color: var(--ff-mute); font-size: 13px; margin: 4px; }
+
+    #ff-leagues { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 14px; align-items: start; }
+    details.ff-row { border-top: 1px solid var(--ff-line); }
+    details.ff-row > summary { list-style: none; cursor: pointer; border-radius: 8px; }
+    details.ff-row > summary::-webkit-details-marker { display: none; }
+    details.ff-row > summary:hover { background: var(--ff-row); }
+    details.ff-row > summary:focus-visible { outline: 2px solid var(--ff-acc); outline-offset: -2px; }
+    .ff-sum {
+      display: grid; align-items: center; gap: 4px 12px; padding: 7px 6px;
+      grid-template-columns: 44px auto auto minmax(0, 1fr) 12px;
+      grid-template-areas: "nm nm nm nm chev" "rk rec score key .";
+    }
+    .ff-nm { grid-area: nm; font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--ff-acc); }
+    .ff-nm span { color: var(--ff-mute); font-weight: 500; letter-spacing: .06em; }
+    .ff-rk { grid-area: rk; line-height: .95; }
+    .ff-rk b { font-size: 24px; font-weight: 700; }
+    .ff-rk sup { font-size: 11px; font-weight: 700; margin-left: 1px; }
+    .ff-small { display: block; font-size: 10.5px; color: var(--ff-mute); text-transform: uppercase; letter-spacing: .08em; }
+    .ff-rec { grid-area: rec; line-height: 1; }
+    .ff-rec b { font-size: 19px; font-weight: 700; font-variant-numeric: tabular-nums; }
+    .ff-form { display: block; margin-top: 3px; font-size: 12.5px; font-weight: 700; letter-spacing: .08em; line-height: 1; }
+    .ff-form i { font-style: normal; color: var(--ff-mute); opacity: .75; }
+    .ff-form i.w { color: var(--ff-acc); opacity: 1; }
+    .ff-form i.l { color: var(--ff-red); opacity: 1; }
+    .ff-score { grid-area: score; line-height: 1; white-space: nowrap; min-width: 0; }
+    .ff-score .n { font-size: 21px; font-weight: 700; font-variant-numeric: tabular-nums; color: var(--ff-mute); }
+    .ff-score .n.up { color: var(--ff-acc); }
+    .ff-score .n.down { color: var(--ff-red); }
+    .ff-score .dash { color: var(--ff-mute); margin: 0 4px; }
+    .ff-score.proj .n { opacity: .8; }
+    .ff-key { grid-area: key; display: flex; align-items: center; gap: 8px; min-width: 0; }
+    .ff-key img, .ff-key .ff-ph-empty { width: 30px; height: 30px; border-radius: 50%; object-fit: cover; background: var(--ff-row); flex-shrink: 0; }
+    .ff-key-txt { min-width: 0; flex: 0 1 auto; line-height: 1.05; }
+    .ff-key-name small { font-size: 11px; color: var(--ff-mute); font-weight: 700; letter-spacing: .06em; margin-left: 2px; }
+    .ff-key-txt .ff-small { line-height: 1.15; }
+    .ff-key-name { font-size: 15px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block; }
+    .ff-key-pts { margin-left: 2px; line-height: 1.05; white-space: nowrap; }
+    .ff-key-pts > span:first-child { font-size: 17px; font-weight: 700; color: var(--ff-acc); font-variant-numeric: tabular-nums; }
+    .ff-key-pts small { margin-left: 3px; font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--ff-mute); }
+    .ff-chev { grid-area: chev; width: 8px; height: 8px; border-right: 2px solid var(--ff-mute); border-bottom: 2px solid var(--ff-mute); transform: rotate(45deg) translateY(-2px); transition: transform .2s; }
+    details[open] > summary .ff-chev { transform: rotate(225deg) translateY(-2px); }
+
+    /* Drill-down */
+    .ff-body { padding: 2px 6px 10px; }
+    .ff-tabs { display: flex; gap: 4px; margin: 2px 0 8px; }
+    .ff-tabs button { font: inherit; font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: 3px 10px; border-radius: 999px; border: 1px solid var(--ff-line); background: transparent; color: var(--ff-mute); cursor: pointer; }
+    .ff-tabs button[aria-selected="true"] { background: var(--ff-acc); border-color: var(--ff-acc); color: var(--ff-bg); }
+    .ff-tabs button:focus-visible { outline: 2px solid var(--ff-acc); outline-offset: 2px; }
+    .ff-lineup { display: grid; grid-template-columns: 1fr; gap: 2px; }
+    .ff-pl { display: grid; grid-template-columns: 34px 24px minmax(0, 1fr) auto; align-items: center; gap: 6px; padding: 2px 6px; border-radius: 6px; background: var(--ff-row); font-size: 14px; }
+    .ff-pl.bn { background: transparent; color: var(--ff-mute); }
+    .ff-pl .slot { font-size: 11px; font-weight: 700; color: var(--ff-acc); letter-spacing: .04em; }
+    .ff-pl.bn .slot { color: var(--ff-mute); }
+    .ff-pl img, .ff-pl .ff-ph-empty { width: 24px; height: 24px; border-radius: 50%; object-fit: cover; background: var(--ff-bg); }
+    .ff-pl .nm { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .ff-pl .nm small { color: var(--ff-mute); font-size: 11px; margin-left: 4px; }
+    .ff-pl .pt { font-weight: 700; font-variant-numeric: tabular-nums; }
+    .ff-sub { grid-column: 1 / -1; font-size: 11px; color: var(--ff-mute); text-transform: uppercase; letter-spacing: .1em; margin: 6px 0 0; }
+    .ff-weeks { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 4px; }
+    .ff-wk { background: var(--ff-row); border-radius: 6px; padding: 4px 2px; text-align: center; line-height: 1.1; }
+    .ff-wk .r { display: block; font-size: 18px; font-weight: 700; color: var(--ff-mute); }
+    .ff-wk.w .r { color: var(--ff-acc); }
+    .ff-wk.l .r { color: var(--ff-red); }
+    .ff-wk .s { display: block; font-size: 11px; color: var(--ff-mute); font-variant-numeric: tabular-nums; }
+    .ff-wk.now { outline: 1px solid var(--ff-acc); }
+
+    @media (max-width: 1000px) { #ff-leagues { grid-template-columns: 1fr; } }
+    @media (max-width: 640px) {
+      .ff-sum { grid-template-columns: 40px auto minmax(0, 1fr) 12px; grid-template-areas: "nm nm nm chev" "rk rec score score" "key key key key"; row-gap: 6px; }
+      .ff-score { justify-self: end; text-align: right; }
+      .ff-weeks { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+    }
+
     footer { background: var(--black); color: #C9D6EA; padding: 12px 0; font-size: 13px; }
     footer a { color: var(--white); }
     footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px 16px; }
@@ -237,6 +323,17 @@
         </div>
       </section>
     </div>
+
+    <div class="wrap ff-wrap">
+      <section class="ff" id="fantasy" aria-labelledby="h-fantasy">
+        <div class="ff-top">
+          <h2 id="h-fantasy">Fantasy Football</h2>
+        </div>
+        <div id="ff-leagues">
+          <noscript><p class="ff-note">Turn on JavaScript to see my fantasy teams.</p></noscript>
+        </div>
+      </section>
+    </div>
   </main>
 
   <footer id="contact">
@@ -248,6 +345,7 @@
       </span>
     </div>
   </footer>
+  <script src="js/fantasy.js" defer></script>
   <!-- GoatCounter: privacy-friendly visit counts, no cookies (approved by Emanuelle) -->
   <script data-goatcounter="https://emanuellesedita.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </body>

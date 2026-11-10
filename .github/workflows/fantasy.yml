@@ -1,0 +1,60 @@
+# Refreshes data/fantasy.json from Sleeper's public API.
+# Every 30 min during NFL game windows, every 6 hours otherwise.
+# Times are UTC (ET + 5h in winter, + 4h in summer).
+name: Update fantasy football data
+
+on:
+  schedule:
+    - cron: "*/30 13-23 * * 0"     # Sunday games (incl. early international kickoffs)
+    - cron: "*/30 0-4 * * 1,2,5"   # Sunday, Monday and Thursday night games
+    - cron: "15 */6 * * *"         # Baseline refresh (waivers, lineup changes)
+  workflow_dispatch:                # Manual "Run workflow" button
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: fantasy-data
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Today's date (for the daily players cache)
+        id: date
+        run: echo "day=$(date -u +%Y-%m-%d)" >> "$GITHUB_OUTPUT"
+
+      # Sleeper asks that the big players file be fetched at most once a day.
+      - uses: actions/cache@v4
+        with:
+          path: .cache/players.json
+          key: sleeper-players-${{ steps.date.outputs.day }}
+          restore-keys: sleeper-players-
+
+      - name: Fetch Sleeper data
+        run: python3 scripts/update_fantasy.py
+        env:
+          # Private: league and user IDs live only in repository secrets, never in code or logs.
+          SLEEPER_USER_ID: ${{ secrets.SLEEPER_USER_ID }}
+          SLEEPER_LEAGUE_IDS: ${{ secrets.SLEEPER_LEAGUE_IDS }}
+
+      - name: Commit if changed
+        run: |
+          git add data/fantasy.json
+          if git diff --cached --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Update fantasy football data"
+          git push
+          # Make sure GitHub Pages republishes with the new data
+          gh api -X POST "repos/${{ github.repository }}/pages/builds" || true
+        env:
+          GH_TOKEN: ${{ github.token }}
