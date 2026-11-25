@@ -39,6 +39,7 @@ Rules for any AI agent working on this site (coding-finance.github.io), the pers
 
 - Live at https://emanuellesedita.com (GitHub Pages, repo `coding-finance/coding-finance.github.io`, branch `main`, HTTPS enforced). `www` and `coding-finance.github.io` redirect there.
 - The `CNAME` file holds the custom domain. Never delete or edit it, or the domain link breaks.
+- `robots.txt`: search engines and AI assistants fetching a page for a person are allowed; AI *training* crawlers (GPTBot, ClaudeBot, Google-Extended, CCBot, etc.) are blocked; `/data/` and `/scripts/` are kept out of search results. Emanuelle wants to be findable by recruiters, so never block normal search engines.
 - DNS is managed by Emanuelle in Squarespace (4 A records to GitHub Pages IPs, `www` CNAME to `coding-finance.github.io`, plus a `_github-pages-challenge-coding-finance` TXT record for domain verification). Do not tell Emanuelle to remove these.
 
 ## Fantasy Football section
