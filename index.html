@@ -103,6 +103,9 @@
     details.role ul { margin: 6px 0 4px; padding-left: 20px; font-size: 13.5px; }
     details.role li { margin-bottom: 4px; }
     abbr[title] { text-decoration: none; cursor: help; }
+    /* Role titles: full names on wider screens, abbreviations on phones */
+    .ab-short { display: none; }
+    @media (max-width: 699px) { .ab-full { display: none; } .ab-short { display: inline; } }
 
     /* Fantasy football: its own Sleeper-style look (dark panel, teal accent, condensed font).
        Data from data/fantasy.json, rendered by js/fantasy.js. */
@@ -260,7 +263,7 @@
             <div><h3>Citi</h3><span class="meta">New York, NY</span></div>
           </div>
           <details class="role">
-            <summary><span class="role-line"><span class="role-title">Healthcare <abbr title="Investment Banking">IB</abbr> – Summer Associate</span><span class="role-dates">Summer 2026</span></span></summary>
+            <summary><span class="role-line"><span class="role-title">Healthcare <span class="ab"><span class="ab-full">Investment Banking</span><abbr class="ab-short" title="Investment Banking">IB</abbr></span> – Summer Associate</span><span class="role-dates">Summer 2026</span></span></summary>
             <ul>
               <li>Supported execution of five live buy- and sell-side mandates across MedTech, Biopharma, and HC Services totaling $60B+ in expected transaction value through financial modeling, due diligence and various client presentation materials</li>
               <li>Drafted business and MD&amp;A sections of a Form 10 registration statement for a ~$20B planned MedTech separation, coordinating inputs across company management, legal counsel, and senior deal team</li>
@@ -276,7 +279,7 @@
           </div>
 
           <details class="role">
-            <summary><span class="role-line"><span class="role-title">MedTech <abbr title="Global Strategic Insights">GSI</abbr> – Manager</span><span class="role-dates">2024 – 2025</span></span></summary>
+            <summary><span class="role-line"><span class="role-title">MedTech <span class="ab"><span class="ab-full">Global Strategic Insights</span><abbr class="ab-short" title="Global Strategic Insights">GSI</abbr></span> – Manager</span><span class="role-dates">2024 – 2025</span></span></summary>
             <ul>
               <li>Led cross-functional buy-side commercial diligence across wound care, focal energy oncology, robotics, and Open/MIS external innovation targets for ICs including CEO, CFO, BD, and Commercial leadership within a ~$32B portfolio</li>
               <li>Built bottom-up US/OUS revenue models for $1B+ acquisitions/R&amp;D projects; delivered base/upside/downside models with tornado sensitivities to support NBIO/BO valuations, influence deal terms/structure, and overall GTM integration strategy</li>
@@ -288,7 +291,7 @@
           </details>
 
           <details class="role">
-            <summary><span class="role-line"><span class="role-title">MedTech Surgery <abbr title="Strategic Customer Group">SCG</abbr> – <abbr title="Senior Financial Analyst">SFA</abbr></span><span class="role-dates">2022 – 2024</span></span></summary>
+            <summary><span class="role-line"><span class="role-title">MedTech Surgery <span class="ab"><span class="ab-full">Strategic Customer Group</span><abbr class="ab-short" title="Strategic Customer Group">SCG</abbr></span> – <span class="ab"><span class="ab-full">Senior Financial Analyst</span><abbr class="ab-short" title="Senior Financial Analyst">SFA</abbr></span></span><span class="role-dates">2022 – 2024</span></span></summary>
             <ul>
               <li>Developed financial analytics to support leadership’s major pricing strategy shift in the MedTech Surgery portfolio and sales/account management personnel restructuring contributing ~$50M in top-line growth for FY’25 enabling 250+ new hires</li>
               <li>Owned individual customer P&amp;L’s and created GPO pricing-tier models across ~$5.6B sales; drove portfolio-level price actions and led weekly exec reviews to align leadership in strategic pricing/deals to accelerate decisions</li>
@@ -297,7 +300,7 @@
           </details>
 
           <details class="role">
-            <summary><span class="role-line"><span class="role-title">MedTech Orthopedics Commercial Excellence – <abbr title="Senior Financial Analyst">SFA</abbr></span><span class="role-dates">2021 – 2022</span></span></summary>
+            <summary><span class="role-line"><span class="role-title">MedTech Orthopedics Commercial Excellence – <span class="ab"><span class="ab-full">Senior Financial Analyst</span><abbr class="ab-short" title="Senior Financial Analyst">SFA</abbr></span></span><span class="role-dates">2021 – 2022</span></span></summary>
             <ul>
               <li>Managed ~$1.3B in commercial S&amp;M budgets supporting ~$5.2B in revenue; developed in-depth knowledge of tiered and product-specific compensation plans for ~2.7K headcount through cross-functional partnership with senior leadership</li>
               <li>Led financial analysis for a sales force restructuring enabling ~$25M investment into hiring 100+ new sales resources</li>
@@ -306,7 +309,7 @@
           </details>
 
           <details class="role">
-            <summary><span class="role-line"><span class="role-title">Corporate Functions – <abbr title="Financial Analyst">FA</abbr> (<abbr title="Finance Leadership Development Program">FLDP</abbr>)</span><span class="role-dates">2019 – 2020</span></span></summary>
+            <summary><span class="role-line"><span class="role-title">Corporate Functions – <span class="ab"><span class="ab-full">Financial Analyst</span><abbr class="ab-short" title="Financial Analyst">FA</abbr></span> (<span class="ab"><span class="ab-full">Finance Leadership Development Program</span><abbr class="ab-short" title="Finance Leadership Development Program">FLDP</abbr></span>)</span><span class="role-dates">2019 – 2020</span></span></summary>
             <ul>
               <li>Managed $60M in talent development and recruitment budgets using revamped quarterly reporting packages and Tableau dashboards; identified and addressed budget risks and opportunities across headcount, travel, and project spend</li>
               <li>Demonstrated strategic financial leadership to solve $2M gap, prioritize key projects, and restructure talent teams</li>
@@ -314,7 +317,7 @@
           </details>
 
           <details class="role">
-            <summary><span class="role-line"><span class="role-title">MedTech <abbr title="Supply Chain">SC</abbr> FP&amp;A – <abbr title="Associate Financial Analyst">AFA</abbr> (<abbr title="Finance Leadership Development Program">FLDP</abbr>)</span><span class="role-dates">2018 – 2019</span></span></summary>
+            <summary><span class="role-line"><span class="role-title">MedTech <span class="ab"><span class="ab-full">Supply Chain</span><abbr class="ab-short" title="Supply Chain">SC</abbr></span> FP&amp;A – <span class="ab"><span class="ab-full">Associate Financial Analyst</span><abbr class="ab-short" title="Associate Financial Analyst">AFA</abbr></span> (<span class="ab"><span class="ab-full">Finance Leadership Development Program</span><abbr class="ab-short" title="Finance Leadership Development Program">FLDP</abbr></span>)</span><span class="role-dates">2018 – 2019</span></span></summary>
             <ul>
               <li>Consolidated decks, developed reporting, and provided commentary for ~$6B in worldwide P&amp;L statements, cost improvement projects, and SC finance metrics delivered directly to the US MedTech SC CFO/VPs</li>
               <li>Lead analyst directing budgets for a major $300M SC initiative outsourcing product production to Jabil</li>
